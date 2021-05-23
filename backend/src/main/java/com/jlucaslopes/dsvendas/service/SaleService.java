@@ -1,4 +1,4 @@
-package com.devsuperior.dsvendas.service;
+package com.jlucaslopes.dsvendas.service;
 
 import java.util.List;
 
@@ -8,12 +8,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.dsvendas.dto.SaleDTO;
-import com.devsuperior.dsvendas.dto.SaleSuccessDTO;
-import com.devsuperior.dsvendas.dto.SaleSumDTO;
-import com.devsuperior.dsvendas.entities.Sale;
-import com.devsuperior.dsvendas.repositories.SaleRepository;
-import com.devsuperior.dsvendas.repositories.SellerRepository;
+import com.jlucaslopes.dsvendas.dto.SaleDTO;
+import com.jlucaslopes.dsvendas.dto.SaleSuccessDTO;
+import com.jlucaslopes.dsvendas.dto.SaleSumDTO;
+import com.jlucaslopes.dsvendas.entities.Sale;
+import com.jlucaslopes.dsvendas.repositories.SaleRepository;
+import com.jlucaslopes.dsvendas.repositories.SellerRepository;
 
 @Service
 public class SaleService {
@@ -26,6 +26,7 @@ public class SaleService {
 	
 	@Transactional(readOnly = true)
 	public Page<SaleDTO> findAll(Pageable pageable) {
+		//Foi feita a consulta abaixo, para salvar os sellers em memória e não precisar voltar na base para cada consulta.
 		sellerRepository.findAll();
 		Page<Sale> result = repository.findAll(pageable);
 		return result.map(x -> new SaleDTO(x));

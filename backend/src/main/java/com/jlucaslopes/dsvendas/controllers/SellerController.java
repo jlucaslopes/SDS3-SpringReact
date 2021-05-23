@@ -1,4 +1,4 @@
-package com.devsuperior.dsvendas.controllers;
+package com.jlucaslopes.dsvendas.controllers;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.dsvendas.dto.SellerDTO;
-import com.devsuperior.dsvendas.service.SellerService;
+import com.jlucaslopes.dsvendas.dto.SellerDTO;
+import com.jlucaslopes.dsvendas.service.SellerService;
 
 @RestController
 @RequestMapping(value = "/sellers")

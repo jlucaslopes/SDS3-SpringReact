@@ -1,8 +1,8 @@
-package com.devsuperior.dsvendas.repositories;
+package com.jlucaslopes.dsvendas.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.devsuperior.dsvendas.entities.Seller;
+import com.jlucaslopes.dsvendas.entities.Seller;
 
 public interface SellerRepository extends JpaRepository<Seller, Long> {
 

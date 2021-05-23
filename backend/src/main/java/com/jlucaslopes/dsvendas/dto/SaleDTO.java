@@ -1,8 +1,8 @@
-package com.devsuperior.dsvendas.dto;
+package com.jlucaslopes.dsvendas.dto;
 
 import java.time.LocalDate;
 
-import com.devsuperior.dsvendas.entities.Sale;
+import com.jlucaslopes.dsvendas.entities.Sale;
 
 public class SaleDTO {
 

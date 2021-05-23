@@ -1,4 +1,4 @@
-package com.devsuperior.dsvendas.entities;
+package com.jlucaslopes.dsvendas.entities;
 
 import java.time.LocalDate;
 
